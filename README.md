@@ -3,6 +3,11 @@
 
 ## Запуск сервера
 
-```go
+```bash
 go run .\server\server.go
+```
+## Запуск клиента
+
+```bash
+go run .\client\client.go
 ```
