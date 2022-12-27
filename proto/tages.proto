@@ -1,0 +1,26 @@
+syntax="proto3";
+
+option go_package = "./proto";
+
+package tages_service;
+
+service TagesService{
+    rpc UploadImage(stream UploadRequest) returns (Messages);
+    rpc DownloadImage(Messages) returns (stream SendChunks);
+    rpc ListImage(NoParam) returns (stream Messages);
+}
+
+message NoParam {};
+
+message Messages {
+    string mes = 1;
+}
+
+message SendChunks {
+    bytes chunk = 1;
+}
+
+message UploadRequest {
+    string mes = 1;
+    bytes chunk = 2;
+}
