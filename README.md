@@ -13,3 +13,11 @@ go run .\server\server.go
 ```bash
 go run .\client\client.go
 ```
+После запуска встречает меню с выбором нужного сервиса.
+```bash
+Menu: 
+  1 » Upload file to server
+  2 » Download file from server
+  3 » File list
+  4 » Exit
+```
